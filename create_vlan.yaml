@@ -1,0 +1,18 @@
+---
+- name: Create VLAN on Cisco IOS
+  hosts: cisco_ios
+  gather_facts: no
+  connection: network_cli
+  vars:
+    ansible_network_os: ios
+  become: yes
+  become_method: enable
+  tasks:
+    - name: Configure VLAN
+      ios_config:
+        lines:
+          - vlan 10
+          - name My_VLAN
+        save_when: modified
+        parents: 
+          - interface Vlan10
