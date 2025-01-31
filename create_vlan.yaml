@@ -13,6 +13,8 @@
         lines:
           - vlan 10
           - name My_VLAN
+          - vlan 20
+          - name execute_vlan_test
         save_when: modified
         parents: 
           - interface Vlan30
