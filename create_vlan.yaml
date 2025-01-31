@@ -15,4 +15,4 @@
           - name My_VLAN
         save_when: modified
         parents: 
-          - interface Vlan10
+          - interface Vlan20
